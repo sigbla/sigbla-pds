@@ -121,6 +121,7 @@ open class SortedMapAdapterTest : MapAdapterTest() {
         val actual = map.map { it.component1() }
 
         assertEquals(listOf(7, 4, 3, 2, 1), actual)
-        assertEquals(c, map.comparator())
+        val c2 = map.comparator() as Comparator<Int>
+        assertEquals(c, c2)
     }
 }

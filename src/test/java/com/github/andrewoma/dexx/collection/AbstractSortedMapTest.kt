@@ -107,7 +107,7 @@ abstract class AbstractSortedMapTest() : AbstractMapTest() {
         }
 
         assertEquals(listOf(7, 4, 3, 2, 1), actual)
-        assertEquals(c, map.comparator())
+        assertEquals(c, map.comparator() as Comparator<Int>)
     }
 
     @Test fun compartorIsNullWhenNotSupplied() {

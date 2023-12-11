@@ -28,7 +28,7 @@ public enum TestMode {
     BENCHMARK;
 
     public static TestMode current() {
-        return TestMode.valueOf(System.getProperty("dexx.test.mode", QUICK.name()));
+        return TestMode.valueOf(System.getProperty("dexx.test.mode", COMPLETE.name()));
     }
 
     public static boolean isEnabled(TestMode mode) {
