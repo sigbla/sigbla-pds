@@ -37,15 +37,15 @@ class DerivedKeyHashMapTest : AbstractMapTest(supportsNullValues = false) {
     @Suppress("BASE_WITH_NULLABLE_UPPER_BOUND", "NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS", "PARAMETER_NAME_CHANGED_ON_OVERRIDE")
     inner class WrappedDerivedKeyHashMap<K, V>(val underlying: DerivedKeyHashMap<K, Pair<K, V?>> = empty()) : AbstractMap<K, V>() {
 
-        override fun put(key: K, value: V?): Map<K, V> {
+        override fun put(key: K & Any, value: V?): Map<K, V> {
             return WrappedDerivedKeyHashMap(underlying.put(key, Pair(key, value)))
         }
 
-        override fun get(key: K): V? {
+        override fun get(key: K & Any): V? {
             return underlying.get(key)?.component2()
         }
 
-        override fun remove(key: K): Map<K, V> {
+        override fun remove(key: K & Any): Map<K, V> {
             return WrappedDerivedKeyHashMap(underlying.remove(key))
         }
 
@@ -63,7 +63,7 @@ class DerivedKeyHashMapTest : AbstractMapTest(supportsNullValues = false) {
             underlying.forEach { f.invoke(it.component2()) }
         }
 
-        override fun containsKey(key: K): Boolean {
+        override fun containsKey(key: K & Any): Boolean {
             return underlying.containsKey(key)
         }
     }

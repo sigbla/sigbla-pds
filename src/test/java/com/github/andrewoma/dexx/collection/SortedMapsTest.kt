@@ -65,7 +65,8 @@ class SortedMapsTest {
     }
 
     @Test fun copyOfCollection() {
-        assertEquals(build(1 to "a", 2 to "b"), SortedMaps.copyOf(arrayListOf(Pair(1, "a"), Pair(2, "b"))))
+        val list = arrayListOf(Pair(1, "a"), Pair(2, "b"))
+        assertEquals(build(1 to "a", 2 to "b"), SortedMaps.copyOf(list))
     }
 
     @Test fun copyOfIterator() {
@@ -81,7 +82,8 @@ class SortedMapsTest {
     }
 
     @Test fun copyOfCollectionWithComparator() {
-        assertEquals(build(c, 1 to "a", 2 to "b"), SortedMaps.copyOf(arrayListOf(Pair(1, "a"), Pair(2, "b"))))
+        val list = arrayListOf(Pair(1, "a"), Pair(2, "b"))
+        assertEquals(build(c, 1 to "a", 2 to "b"), SortedMaps.copyOf(list))
     }
 
     @Test fun copyOfIteratorWithComparator() {

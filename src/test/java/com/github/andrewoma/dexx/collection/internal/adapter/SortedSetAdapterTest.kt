@@ -26,6 +26,7 @@ import com.github.andrewoma.dexx.collection.SortedSets
 import com.github.andrewoma.dexx.collection.TreeSet
 import org.junit.Test
 import java.util.*
+import kotlin.Comparator
 import kotlin.test.assertEquals
 
 class SortedSetAdapterTest : SetAdapterTest() {
@@ -108,6 +109,7 @@ class SortedSetAdapterTest : SetAdapterTest() {
         val set = TreeSet<Int>(c).add(2).add(1).add(3).add(7).add(4).asSortedSet()
 
         assertEquals(listOf(7, 4, 3, 2, 1), set.toList())
-        assertEquals(c, set.comparator())
+        val c2 = set.comparator() as Comparator<Int>
+        assertEquals(c, c2)
     }
 }
