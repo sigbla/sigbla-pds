@@ -1,6 +1,7 @@
 # What are Dexx Collections?
 
 [![Build](https://github.com/sigbla/new-dexx/actions/workflows/build.yml/badge.svg)](https://github.com/sigbla/new-dexx/actions/workflows/build.yml)
+[![codecov](https://codecov.io/gh/sigbla/new-dexx/graph/badge.svg?token=0YW2KBD7S9)](https://codecov.io/gh/sigbla/new-dexx)
 
 Dexx Collections are a port of Scala's immutable, persistent collection classes to pure Java.
 
