@@ -1,4 +1,6 @@
-#### What are Dexx Collections?
+# What are Dexx Collections?
+
+[![Build](https://github.com/sigbla/new-dexx/actions/workflows/build.yml/badge.svg)](https://github.com/sigbla/new-dexx/actions/workflows/build.yml)
 
 Dexx Collections are a port of Scala's immutable, persistent collection classes to pure Java.
 
@@ -245,6 +247,3 @@ See the [tests](src/test/kotlin/com/github/andrewoma/dexx/kollection) for more e
 
 * Expose sorted interfaces for `Sets` and `Maps` to allow efficient creation of subsets without copying
 * Explore adding methods such as `add` and `remove` in addition the existing operators
-
-
-[![Build Status](https://travis-ci.org/andrewoma/dexx.svg?branch=master)](https://travis-ci.org/andrewoma/dexx)
