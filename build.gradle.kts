@@ -5,7 +5,7 @@ plugins {
     kotlin("jvm") version "1.9.20"
 }
 
-group = "sigbla.app.new-dexx"
+group = "sigbla.app"
 version = "0.8-SNAPSHOT"
 
 repositories {
