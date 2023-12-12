@@ -21,7 +21,7 @@
  */
 
 /**
- * Dexx collections are a port of Scala's immutable, persistent collection classes to pure Java.
+ * Sigbla PDS is a port of Scala's immutable, persistent collection classes to pure Java.
  * <p/>
  * <p>Persistent in the context of functional data structures means the data structure preserves
  * the previous version of itself when modified. This means any reference to a collection is effectively immutable.
@@ -29,7 +29,7 @@
  * structure unchanged.
  * <p/>
  * <p>The following diagram shows the key interfaces (blue) and classes (green) in this package:
- * <p><img alt="Dexx collections overview" src="https://github.com/andrewoma/dexx/raw/master/docs/dexxcollections.png">
+ * <p><img alt="Collections overview" src="https://raw.githubusercontent.com/sigbla/sigbla-pds/master/docs/collections.png">
  * <p/>
  * <p><b>Usage Notes:</b>
  * <ul>
@@ -52,6 +52,6 @@
  * may return the same collection as no modifications were required.
  * </ul>
  * <p/>
- * <p>See the <a href="https://github.com/andrewoma/dexx">project site</a> for further examples and information.
+ * <p>See the <a href="https://github.com/sigbla/sigbla-pds">project site</a> for further examples and information.
  */
 package sigbla.app.pds.collection;
