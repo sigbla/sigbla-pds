@@ -68,6 +68,8 @@ used in the source to support Kotlin's nullable types, but they are
 
 ## Release Notes
 
+* 0.8:
+  * First release post project restructuring to Sigbla PDS - no functional changes
 * 0.7:
   * Fixes #11 - a balancing error in red black trees
 * 0.6:
@@ -97,12 +99,17 @@ This project is licensed under a MIT license. Portions ported from Scala are Sca
 
 ## Usage - Adding to your project
 
-Version 0.7 has been released and is available in Maven Central [here](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.github.andrewoma.dexx%22).
-You can use it via the following gradle dependency:
+Version 0.8 has been released and is available.
+You can use it via the following gradle repository + dependency:
 
-```groovy
-'com.github.andrewoma.dexx:collection:0.7' // For Java
-'com.github.andrewoma.dexx:kollection:0.7' // For Kotlin
+``` kotlin
+repositories {
+    maven { url = uri("https://mvn.sigbla.app/repository") }
+}
+
+dependencies {
+    implementation("sigbla.app:sigbla-pds:0.8")
+}
 ```
 
 ## Constructing collections
