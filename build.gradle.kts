@@ -3,6 +3,7 @@ plugins {
     id("maven-publish")
     id("jacoco")
     kotlin("jvm") version "1.9.20"
+    signing
 }
 
 group = "sigbla.app"
@@ -44,4 +45,26 @@ tasks.withType<JacocoReport> {
         csv.required = true
         html.required = true
     }
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("sigbla") {
+            groupId = "sigbla.app"
+            artifactId = "sigbla-pds"
+
+            from(components["java"])
+        }
+    }
+
+    repositories {
+        maven {
+            name = "ProjectRepo"
+            url = uri(layout.projectDirectory.dir(".m2/repository"))
+        }
+    }
+}
+
+signing {
+    sign(publishing.publications["sigbla"])
 }
