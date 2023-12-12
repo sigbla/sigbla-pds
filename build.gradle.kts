@@ -1,5 +1,7 @@
 plugins {
-    java
+    id("java-library")
+    id("maven-publish")
+    id("jacoco")
     kotlin("jvm") version "1.9.20"
 }
 
@@ -34,4 +36,12 @@ tasks.test {
 
 kotlin {
     jvmToolchain(17)
+}
+
+tasks.withType<JacocoReport> {
+    reports {
+        xml.required = true
+        csv.required = true
+        html.required = true
+    }
 }
