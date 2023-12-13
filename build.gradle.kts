@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "sigbla.app"
-version = "1.0"
+version = "1.1-SNAPSHOT"
 
 repositories {
     mavenCentral()
