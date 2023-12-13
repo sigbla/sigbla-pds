@@ -7,12 +7,13 @@ plugins {
 }
 
 group = "sigbla.app"
-version = "0.9-SNAPSHOT"
+version = "1.0"
 
 repositories {
     mavenCentral()
 }
 
+val annotationsVersion = "24.1.0"
 val kotlinVersion = "1.9.20"
 val guavaVersion = "32.1.3-jre"
 val assertJVersion = "1.7.0"
@@ -20,8 +21,8 @@ val junitVersion = "4.13.2"
 val junitEngineVersion = "5.9.2"
 
 dependencies {
-    implementation("com.intellij:annotations:12.0")
-    testImplementation("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
+    implementation("org.jetbrains:annotations:$annotationsVersion")
+    compileOnly("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion")
     testImplementation("com.google.guava:guava:$guavaVersion")
     testImplementation("org.assertj:assertj-core:$assertJVersion")
