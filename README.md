@@ -101,7 +101,7 @@ This project is licensed under a MIT license. Portions ported from Scala are Sca
 
 ## Usage - Adding to your project
 
-Version 0.8 has been released and is available.
+Version 1.0 has been released and is available.
 You can use it via the following gradle repository + dependency:
 
 ``` kotlin
