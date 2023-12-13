@@ -68,6 +68,8 @@ used in the source to support Kotlin's nullable types, but they are
 
 ## Release Notes
 
+* 1.0:
+  * Complete dependency updates
 * 0.8:
   * First release post project restructuring to Sigbla PDS - no functional changes
 * 0.7:
@@ -108,7 +110,7 @@ repositories {
 }
 
 dependencies {
-    implementation("sigbla.app:sigbla-pds:0.8")
+    implementation("sigbla.app:sigbla-pds:1.0")
 }
 ```
 
